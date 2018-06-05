@@ -9,11 +9,9 @@ function getIndexToIns(arr, num) {
   arr = arr.sort(function(a, b){return a-b})
   if(!arr.length){return 0} // if array is empty
   if(arr[arr.length-1] < num){return arr.length} // if num is the largest element
-  if(arr.indexOf(num) != -1){ // if num is in arr
-    return arr.indexOf(num)
-  }
+  
   for( let i = 0; i < arr.length; i++ ) {
-    if(arr[i] > num){
+    if(arr[i] >= num){
       return i
     }
   }
