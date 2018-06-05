@@ -1,11 +1,10 @@
+/*
+Return the length of the longest word in the provided sentence.
+
+Your response should be a number.
+*/
 function findLongestWordLength(str) {
-  let words = [];
-  while(str.indexOf(' ') != -1){
-    let index = str.indexOf(' ')
-    words.push(str.slice(0, index))
-    str = str.slice(index+1, str.length)
-  }
-  words.push(str) // push the final word
+  let words = str.split(' ')
 
   let max = 0;
   for(let word of words){
