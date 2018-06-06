@@ -5,7 +5,7 @@ that are of the same value as these arguments.
 */
 
 function destroyer(arr, ...toRemove) {
-  return arr.filter((el) => toRemove.indexOf(el) == -1 )
+  return arr.filter((el) => !toRemove.includes(el) )
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);

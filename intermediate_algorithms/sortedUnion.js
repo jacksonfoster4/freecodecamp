@@ -16,7 +16,7 @@ function uniteUnique() {
     arr = arr.concat(arguments[i])
   }
   for(let val of arr){
-    if(final.indexOf(val) != -1){
+    if(final.includes(val)){
       continue
     }
     else {

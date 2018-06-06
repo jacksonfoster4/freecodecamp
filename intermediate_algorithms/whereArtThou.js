@@ -15,7 +15,7 @@ function whatIsInAName(collection, source) {
   let final = [];
 
   let sourceKeys = Object.keys(source);
-  let allKeysArePresent = (obj) => sourceKeys.every((key) => Object.keys(obj).indexOf(key) != -1);
+  let allKeysArePresent = (obj) => sourceKeys.every((key) => Object.keys(obj).includes(key));
   let allValuesAreEqual = (obj) => sourceKeys.every((key) => obj[key] == source[key]);
 
   for(let i = 0; i < collection.length; i++){

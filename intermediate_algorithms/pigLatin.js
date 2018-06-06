@@ -11,11 +11,11 @@ Input strings are guaranteed to be English words in all lowercase.
 
 function translatePigLatin(str) {
   const VOWELS ='aeiou';
-  if(VOWELS.indexOf(str[0]) != -1){return str + 'way'}
-  
+  if(VOWELS.includes(str[0])){return str + 'way'}
+
   let consonantCluster = '';
   let i = 0
-  while(VOWELS.indexOf(str[i]) == -1 && i < str.length){
+  while(!VOWELS.includes(str[i])  && i < str.length){
     consonantCluster += str[i]
     i++
   }
